@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  reloader:
+    image: "${DOCKER_REGISTRY}/${DOCKER_REPO}:${TAG}"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      FILES_PATTERN: /etc/*.conf #./path/to/settings/*.conf
+      ACTION: wget --quiet -c -S http://localhost/reload-endoint-to-another-container-in-same-pod
+      CHECK_INTERVAL: 2 # optional
