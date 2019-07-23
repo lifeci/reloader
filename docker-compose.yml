@@ -8,5 +8,5 @@ services:
       dockerfile: ./Dockerfile
     environment:
       FILES_PATTERN: /etc/*.conf #./path/to/settings/*.conf
-      ACTION: wget -q -c -S http://localhost/reload-endoint-to-another-container-in-same-pod
+      ACTION: 'wget -q -c -S http://localhost/reload-endoint-to-another-container-in-same-pod'
       CHECK_INTERVAL: 2 # optional
