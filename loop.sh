@@ -21,7 +21,7 @@ get_sha(){
 sum_current=`get_sha $files_pattern`;
 
 echo "I'll monitor every check_interval=$check_interval files_pattern=$files_pattern";
-echo "in case if it will be changed => apply action=$action";
+echo "in case if it will be changed => apply action: $action";
 
 while true
 do
@@ -32,8 +32,6 @@ do
     echo "`date` :: executing: $action";
     `$action`
     sum_current=$sum_check;
-  else
-    echo "nothing to do";
   fi;
 
   sleep $check_interval;
