@@ -4,6 +4,9 @@ Monitor files pattern by sha sum and execute action if anything changed.
 ## Use case
 - Sidecar pattern as second container at pod that monitor file changes on shared vloumes [1] and send reload action/signal to (main/first) service container.
 
+## Size
+docker image size ~1MB with minimal set of tools, based on [busybox:1](https://hub.docker.com/_/busybox)
+
 ## ENV Variables
 
 FILES_PATTERN: /etc/*.conf #./path/to/settings/*.conf
