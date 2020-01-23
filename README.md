@@ -11,7 +11,7 @@ docker image size ~1MB with minimal set of tools, based on [busybox:1](https://h
 
 |      ENV Name      | Required |                    Example                    |
 | -----------------  | :------: | :-------------------------------------------- |
-| **FILES_PATTERN**  |    YES   | "/etc/*.conf"  OR "./path/to/settings/*.conf" |
+| **FILES_PATTERN**  |    YES   | `"/etc/*.conf"`  OR `"./path/to/settings/*.conf"` |
 | **ACTION**         |    YES   | "wget -q -c -S http://localhost/reload"  OR "/path/to/executable --reload" |
 | **CHECK_INTERVAL** |    NO   | 5  (Default value is 1s)   |
 
